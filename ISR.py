@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 def BrutoANeto(fltSueldo= 28529.65, Tipo = "Mensual", DesplegaInfo="No"):
     boolT = True
     intPos = 0
@@ -23,7 +26,7 @@ def BrutoANeto(fltSueldo= 28529.65, Tipo = "Mensual", DesplegaInfo="No"):
     
     if(DesplegaInfo == "Si"):
         print ("Limite Inferior ", df1.Inferior[intPos])
-        print ("Excedente" + fltExcedente)
+        print ("Excedente" + str(fltExcedente))
         print ("Impuesto marginal" + fltImpMarg)
         print ("Cuota Fija" + df1.Cuota[intPos])
         print ("Total ISR" + fltImpTotal)
